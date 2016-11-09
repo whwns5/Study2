@@ -2,60 +2,60 @@ package day03;
 /*
  * 2011_11_07
  * 
- * »ó¼ö(Constant)(°íÀ¯ÇÏ´Ù) ex. ³ó±¸°ø, ¾ß±¸°ø ..
- *  - Ç×»ó ÀÏÁ¤ÇÑ °ªÀ» À¯ÁöÇÏ´Â µ¥ÀÌÅÍ
- * º¯¼ö(Variable) ex. ¹Ù±¸´Ï
- *  - Æ¯Á¤ »óÈ²¿¡ µû¶ó º¯È­ÇÏ´Â µ¥ÀÌÅÍ
- *  - _ , $ ¸¦ Á¦¿ÜÇÑ Æ¯¼ö¹®ÀÚ »ç¿ë ºÒ°¡
- * ÀÚ·áÇü ex. ¾î¶² Å©±âÀÇ ¹Ù±¸´Ï¿¡ ´ãÀ»Áö ¸í½Ã
- * - »ó¼ö³ª º¯¼öÀÇ µ¥ÀÌÅÍ Å©±â¸¦ ±ÔÁ¤È­ ÇÑ °Í.
+ * ìƒìˆ˜(Constant)(ê³ ìœ í•˜ë‹¤) ex. ë†êµ¬ê³µ, ì•¼êµ¬ê³µ ..
+ *  - í•­ìƒ ì¼ì •í•œ ê°’ì„ ìœ ì§€í•˜ëŠ” ë°ì´í„°
+ * ë³€ìˆ˜(Variable) ex. ë°”êµ¬ë‹ˆ
+ *  - íŠ¹ì • ìƒí™©ì— ë”°ë¼ ë³€í™”í•˜ëŠ” ë°ì´í„°
+ *  - _ , $ ë¥¼ ì œì™¸í•œ íŠ¹ìˆ˜ë¬¸ì ì‚¬ìš© ë¶ˆê°€
+ * ìë£Œí˜• ex. ì–´ë–¤ í¬ê¸°ì˜ ë°”êµ¬ë‹ˆì— ë‹´ì„ì§€ ëª…ì‹œ
+ * - ìƒìˆ˜ë‚˜ ë³€ìˆ˜ì˜ ë°ì´í„° í¬ê¸°ë¥¼ ê·œì •í™” í•œ ê²ƒ.
  * 
- * ±âº» ÀÚ·áÇü 
+ * ê¸°ë³¸ ìë£Œí˜• 
  * boolean	1 byte 
  * byte		1 byte -128 ~ 127 
  * char		2 byte 0 ~ 65535
  * short 	2 byte
- * int 		4 byte (±âº»ÀÚ·áÇü)
+ * int 		4 byte (ê¸°ë³¸ìë£Œí˜•)
  * long 	8 byte
  * float 	4 byte
- * double 	8 byte (±âº»ÀÚ·áÇü)
+ * double 	8 byte (ê¸°ë³¸ìë£Œí˜•)
  * 
- * 1 byte(µ¥ÀÌÅÍ¸¦ ÀúÀåÇÏ´Â ÃÖ¼Ò ´ÜÀ§) = 8 bit(µ¥ÀÌÅÍ¸¦ Ç¥ÇöÇÏ´Â ÃÖ¼Ò ´ÜÀ§)
+ * 1 byte(ë°ì´í„°ë¥¼ ì €ì¥í•˜ëŠ” ìµœì†Œ ë‹¨ìœ„) = 8 bit(ë°ì´í„°ë¥¼ í‘œí˜„í•˜ëŠ” ìµœì†Œ ë‹¨ìœ„)
  * 
- * Çü º¯È¯
- *  - Æ¯Á¤ ÀÚ·áÇü °ªÀ» ´Ù¸¥ ÀÚ·áÇü¿¡ ´ëÀÔ ÇÏ´Â °Í.
+ * í˜• ë³€í™˜
+ *  - íŠ¹ì • ìë£Œí˜• ê°’ì„ ë‹¤ë¥¸ ìë£Œí˜•ì— ëŒ€ì… í•˜ëŠ” ê²ƒ.
  * byte-char-short-int-long
  * -------Promotion------->
  * <-------Casting---------
  * 
- * Çü º¯È¯ ¹æ¹ı
- *  (ÀÚ·áÇü)½Ä ex) (byte)(a+b)
+ * í˜• ë³€í™˜ ë°©ë²•
+ *  (ìë£Œí˜•)ì‹ ex) (byte)(a+b)
  */
 public class Day03_01 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("1. ³í¸® ÀÚ·áÇü");
-		boolean bool; //º¯¼ö ¼±¾ğ 
-		bool = true; //º¯¼ö ÃÊ±âÈ­ // 1 byte
-//		System.out.println("bool = "bool);	// Syntax ¿¡·¯(¹®¹ı ¿¡·¯)
-		System.out.println("bool = " + bool); // + -> µ¥ÀÌÅÍ¿Í µ¥ÀÌÅÍ¸¦ ¿¬°áÇØÁÖ´Â ÀÇ¹Ì
+		System.out.println("1. ë…¼ë¦¬ ìë£Œí˜•");
+		boolean bool; //ë³€ìˆ˜ ì„ ì–¸ 
+		bool = true; //ë³€ìˆ˜ ì´ˆê¸°í™” // 1 byte
+//		System.out.println("bool = "bool);	// Syntax ì—ëŸ¬(ë¬¸ë²• ì—ëŸ¬)
+		System.out.println("bool = " + bool); // + -> ë°ì´í„°ì™€ ë°ì´í„°ë¥¼ ì—°ê²°í•´ì£¼ëŠ” ì˜ë¯¸
 		
-		boolean bool2 = false; // º¯¼ö ¼±¾ğ°ú µ¿½Ã¿¡ ÃÊ±âÈ­
+		boolean bool2 = false; // ë³€ìˆ˜ ì„ ì–¸ê³¼ ë™ì‹œì— ì´ˆê¸°í™”
 		System.out.println("bool2 = " + bool2);
 		
 		
-		System.out.println("2. Á¤¼ö ÀÚ·áÇü");
-//		byte by = 128; // Type mismatch ¿¡·¯. byte ÀÇ ¹üÀ§´Â -128 ~ 127
+		System.out.println("2. ì •ìˆ˜ ìë£Œí˜•");
+//		byte by = 128; // Type mismatch ì—ëŸ¬. byte ì˜ ë²”ìœ„ëŠ” -128 ~ 127
 		byte by = 127; // 1 byte
-		by++; // °£Á¢ ¿À¹ö ÇÃ·Î¿ì
+		by++; // ê°„ì ‘ ì˜¤ë²„ í”Œë¡œìš°
 		by++;
 		System.out.println("by = " + by);
 		
 		
-		System.out.println("3. ¹®ÀÚ ÀÚ·áÇü");
+		System.out.println("3. ë¬¸ì ìë£Œí˜•");
 		//char ch = 'A'; // 2 byte
-		char ch = 'A' + 1; // ½ÇÁ¦ char´Â Á¤¼ö µ¥ÀÌÅÍ(Á¤¼ö ÀÚ·áÇü)ÀÌ±â ¶§¹® °¡´É. ¾Æ½ºÅ°ÄÚµå
+		char ch = 'A' + 1; // ì‹¤ì œ charëŠ” ì •ìˆ˜ ë°ì´í„°(ì •ìˆ˜ ìë£Œí˜•)ì´ê¸° ë•Œë¬¸ ê°€ëŠ¥. ì•„ìŠ¤í‚¤ì½”ë“œ
 							/* 0 ~ 9 : 48 ~ 57
 						    * A ~ Z : 65 ~ 90
 						    * a ~ z : 97 ~ 122
@@ -65,8 +65,8 @@ public class Day03_01 {
 		System.out.println("ch = " + ch);
 		
 		char ch2 = 'A' + 1;
-//		System.out.println("ch2 = " + (ch2 + 1)); // °á°ú 67 -> 65 + 1 ÀÌ ¿¬»êµÇ¸é¼­ int·Î ÀÎ½ÄÇÏ±â ¶§¹®
-		System.out.println("ch2 = " + (char)(ch2 + 1)); // Çüº¯È¯À» ÅëÇØ char·Î ÁöÁ¤ÇÑ´Ù.
+//		System.out.println("ch2 = " + (ch2 + 1)); // ê²°ê³¼ 67 -> 65 + 1 ì´ ì—°ì‚°ë˜ë©´ì„œ intë¡œ ì¸ì‹í•˜ê¸° ë•Œë¬¸
+		System.out.println("ch2 = " + (char)(ch2 + 1)); // í˜•ë³€í™˜ì„ í†µí•´ charë¡œ ì§€ì •í•œë‹¤.
 		
 		short sh = 1004; // 2 byte
 		System.out.println("sh = " + sh);
@@ -76,25 +76,25 @@ public class Day03_01 {
 		
 		byte a = 3;
 		byte b = 4;
-//		byte result = a + b; // Type mismatch ¿¡·¯. a+b¸¦ int·Î ÀÎ½ÄÇÏ±â ¶§¹®
+//		byte result = a + b; // Type mismatch ì—ëŸ¬. a+bë¥¼ intë¡œ ì¸ì‹í•˜ê¸° ë•Œë¬¸
 //		int result = a + b;
-		byte result = (byte) (a + b); // Çüº¯È¯À» a+b¸¦ byte·Î Çüº¯È¯ ÇÏ¿© ÀúÀå
+		byte result = (byte) (a + b); // í˜•ë³€í™˜ì„ a+bë¥¼ byteë¡œ í˜•ë³€í™˜ í•˜ì—¬ ì €ì¥
 		System.out.println("result = " + result);
 		
-//		long lo = 10004; // 10004¸¦ int·Î ¸ÕÀú ÀÎ½ÄÇÏÁö¸¸ ´õÅ« ¹Ù±¸´ÏÀÎ long¿¡ int¸¦ ³Ö±â ¶§¹® ¿À·ù°¡ ³ªÁö ¾Ê´Â´Ù. Ä³½ºÆÃ ÀÛ¾÷ÀÌ ÁøÇà
-		long lo = 10004L; // L¸¦ ºÙÀÌ¸é ¹Ù·Î longÀ¸·Î ÀÎ½ÄÇÑ´Ù. // 8 byte
+//		long lo = 10004; // 10004ë¥¼ intë¡œ ë¨¼ì € ì¸ì‹í•˜ì§€ë§Œ ë”í° ë°”êµ¬ë‹ˆì¸ longì— intë¥¼ ë„£ê¸° ë•Œë¬¸ ì˜¤ë¥˜ê°€ ë‚˜ì§€ ì•ŠëŠ”ë‹¤. ìºìŠ¤íŒ… ì‘ì—…ì´ ì§„í–‰
+		long lo = 10004L; // Lë¥¼ ë¶™ì´ë©´ ë°”ë¡œ longìœ¼ë¡œ ì¸ì‹í•œë‹¤. // 8 byte
 		System.out.println("lo = " + lo);
 		
 		
-		System.out.println("3. ½Ç¼ö ÀÚ·áÇü");
-//		float f1 = 3.123; // Type mismatch ¿¡·¯. 3.123 À» ¸ÕÀú ¼³°èµÇ¾î ÀÖ´Â double·Î ÀÎ½ÄÇÏ±â ¶§¹®¿¡ 
+		System.out.println("3. ì‹¤ìˆ˜ ìë£Œí˜•");
+//		float f1 = 3.123; // Type mismatch ì—ëŸ¬. 3.123 ì„ ë¨¼ì € ì„¤ê³„ë˜ì–´ ìˆëŠ” doubleë¡œ ì¸ì‹í•˜ê¸° ë•Œë¬¸ì— 
 		float f1 = 3.123f; // 4 byte
 		System.out.println("f1 = " + f1);
 		
 		double dou = 1.234; // 8 byte
 		System.out.println("dou = " + dou);
 		
-		System.out.println("Github Å×½ºÆ®");
+		System.out.println("Github í…ŒìŠ¤íŠ¸ push");
 	}
 
 }
