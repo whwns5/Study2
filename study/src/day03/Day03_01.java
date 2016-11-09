@@ -93,6 +93,8 @@ public class Day03_01 {
 		
 		double dou = 1.234; // 8 byte
 		System.out.println("dou = " + dou);
+		
+		System.out.println("Github Å×½ºÆ®");
 	}
 
 }
