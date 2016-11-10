@@ -1,5 +1,6 @@
 package day05;
 import java.io.*;
+import java.text.DecimalFormat;
 /*
  * 2016_11_09
  * 
@@ -30,7 +31,10 @@ public class Day05_04_Q2 {
 		avg = sum/(double)3;	// Æò±Õ °è»ê
 		//avg = sum/3.0;	// Æò±Õ °è»ê
 		
-		System.out.println("ÃÑÁ¡ : " + sum + " Æò±Õ : " + avg);
+		DecimalFormat df = new DecimalFormat("#.##");
+
+		System.out.println("ÃÑÁ¡ : " + sum + " Æò±Õ : " + df.format(avg));
+		
 		
 		
 	}
