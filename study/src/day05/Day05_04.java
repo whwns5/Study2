@@ -22,6 +22,8 @@ public class Day05_04 {
 		name = br.readLine();
 		
 		System.out.println("아 ~ 이름이 \"" + name + "\" 이군요");
+		
+		System.out.println("신규 태스트");
 	}
 
 }
