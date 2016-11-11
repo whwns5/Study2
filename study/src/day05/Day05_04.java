@@ -24,6 +24,7 @@ public class Day05_04 {
 		System.out.println("아 ~ 이름이 \"" + name + "\" 이군요");
 		
 		System.out.println("신규 태스트");
+		System.out.println("신규 태스트2");
 	}
 
 }
